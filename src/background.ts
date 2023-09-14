@@ -29,13 +29,13 @@ chrome.action.onClicked.addListener((tab) => {
 })
 
 chrome.contextMenus.create({
-  id: 'searchMaps',
+  id: 'mapit',
   title: "Search Maps for '%s'",
   contexts: ['selection'],
 })
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === 'searchMaps') {
+  if (info.menuItemId === 'mapit') {
     if (loadedTabs.includes(tab?.id!)) {
       // Content script is already present, just send the message
       showContent(tab)
