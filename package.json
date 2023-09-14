@@ -1,0 +1,15 @@
+{
+  "name": "mapit",
+  "scripts": {
+    "dle": "bun ./scripts/build.ts",
+    "dlew": "watchman-make --pattern 'manifest.json' 'src/**/*' --run 'bun dle'"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.245",
+    "@types/firefox-webext-browser": "^111.0.1",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
